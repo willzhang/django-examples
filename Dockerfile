@@ -10,10 +10,12 @@ WORKDIR /code/
 
 COPY library/ ./
 
-RUN pip install --no-cache-dir -r requirements.txt \
-    && chmod +x entrypoint.sh
+RUN pip install --no-cache-dir -r requirements.txt
 
 VOLUME /code/
 EXPOSE 8000
 
-CMD ["/code/entrypoint.sh"]
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+
+CMD ["/entrypoint.sh"]
