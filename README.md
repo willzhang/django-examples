@@ -1,6 +1,6 @@
 # django-library
 
-django实现支持书籍增删改查.
+适合小白的django示例app-图书管理系统，支持书籍增删改查！
 
 ## getting-started
 
