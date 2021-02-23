@@ -1,1 +1,1 @@
-docker build -t willdockerhub/django-library:latest -f Dockerfile .
+docker build -t willdockerhub/django-library:latest .
