@@ -1,6 +1,6 @@
 # django-library
 
-原文：https://www.bilibili.com/video/BV12y4y1z72Q
+django实现支持书籍增删改查.
 
 ## getting-started
 
@@ -16,3 +16,5 @@ docker run -d --name django-library \
  ```
  http://127.0.0.1:8000/books/
  ```
+ 
+ 原文：https://www.bilibili.com/video/BV12y4y1z72Q
