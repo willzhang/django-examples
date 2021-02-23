@@ -69,7 +69,7 @@ docker run -d --name django-library \
 docker run -d --name django-library \
   --restart always \
   -p 8000:8000 \
-  -v django-library/:/code/ \
+  -v django-library:/code/ \
   willdockerhub/django-library 
 ```
 
