@@ -6,7 +6,6 @@ django-password-reset==2.0
 docutils==0.16
 filelock==3.0.12
 Markdown==3.3.3
-mysqlclient==2.0.3
 Pillow==8.1.0
 pytz==2020.5
 six==1.15.0
