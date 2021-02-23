@@ -1,6 +1,7 @@
 version: "3"
 services:
   django-library:
+    image: willdockerhub/django-library
     restart: always
     volumes:
       - "/data/django-library/conf/settings.py:/code/library/settings.py"
@@ -11,6 +12,7 @@ services:
 
   db:
     image: mysql:8.0.23
+    command: --default-authentication-plugin=mysql_native_password
     volumes:
       - "mysql:/var/lib/mysql"
     ports:
@@ -21,3 +23,6 @@ services:
       - MYSQL_DATABASE=library
       - MYSQL_USER=library
       - MYSQL_PASSWORD=library123
+
+volumes:
+  mysql:
