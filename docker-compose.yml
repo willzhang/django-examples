@@ -1,22 +1,23 @@
 version: "3"
 services:
-  app:
+  django-library:
     restart: always
-    build: .
-    command: bash -c "python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
     volumes:
-      - .:/code
+      - "/data/django-library/conf/settings.py:/code/library/settings.py"
     ports:
       - "8000:8000"
     depends_on:
       - db
+
   db:
-    image: mysql:5.7
+    image: mysql:8.0.23
     volumes:
-      - "./mysql:/var/lib/mysql"
+      - "mysql:/var/lib/mysql"
     ports:
       - "3306:3306"
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=mypassword
-      - MYSQL_DATABASE=django_app
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=library
+      - MYSQL_USER=library
+      - MYSQL_PASSWORD=library123
