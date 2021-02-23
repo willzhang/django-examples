@@ -17,6 +17,8 @@ docker run -d --name django-library \
  http://127.0.0.1:8000/books/
  ```
  
+ books页面：
+ 
  [![yqVrPP.png](https://s3.ax1x.com/2021/02/23/yqVrPP.png)](https://imgchr.com/i/yqVrPP)
  
  原文：https://www.bilibili.com/video/BV12y4y1z72Q
