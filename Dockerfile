@@ -1,14 +1,19 @@
 FROM python:3.9-slim-buster
 
+ENV PYTHONUNBUFFERED 1
+
 RUN apt-get update \
-#   && apt-get install -y --no-install-recommends mysql-client \
+    && apt-get install -y --no-install-recommends python3-dev default-libmysqlclient-dev gcc \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /usr/src/app
+WORKDIR /code/
 
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
-COPY . .
+COPY library/ ./
 
+RUN pip install --no-cache-dir -r requirements.txt \
+    && chmod +x entrypoint.sh
+
+VOLUME /code/
 EXPOSE 8000
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+
+CMD ["/code/entrypoint.sh"]
