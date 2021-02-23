@@ -21,7 +21,7 @@ books页面：
  
 [![yqVrPP.png](https://s3.ax1x.com/2021/02/23/yqVrPP.png)](https://imgchr.com/i/yqVrPP)
  
-## 使用mysql数据库
+## 连接mysql数据库
  
 运行mysql数据库
 ```
@@ -36,7 +36,7 @@ books页面：
   mysql:8.0.23 --default-authentication-plugin=mysql_native_password
 ```
  
-创建settings.py配置文件
+创建settings.py配置文件目录
  ```
  mkdir -p /data/django-library/conf/
  ```
@@ -55,7 +55,7 @@ books页面：
 }
 ```
  
-运行django-library,
+运行django-library
 ```
 docker run -d --name django-library \
   --restart always \
@@ -63,6 +63,16 @@ docker run -d --name django-library \
   -v /data/django-library/conf/settings.py:/code/library/settings.py \
   willdockerhub/django-library 
 ```
+
+## 数据持久化
+```
+docker run -d --name django-library \
+  --restart always \
+  -p 8000:8000 \
+  -v django-library/:/code/ \
+  willdockerhub/django-library 
+```
+
  
  
 参考：https://www.bilibili.com/video/BV12y4y1z72Q
