@@ -2,6 +2,33 @@
 
 适合小白的django示例app-图书管理系统，支持书籍增删改查！
 
+源码结构：
+
+```
+library/
+├── library
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── library_app
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── static
+│   ├── tests.py
+│   └── views.py
+├── manage.py
+├── requirements.txt
+└── templates
+    ├── addbook.html
+    ├── books.html
+    └── changebook.html
+```
+
 ## getting-started
 
 运行app
