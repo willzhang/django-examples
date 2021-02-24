@@ -31,7 +31,7 @@ library/
 
 ## getting-started
 
-运行app
+docker快速开始，运行app
 ```
 docker run -d --name django-library \
  --restart always \
