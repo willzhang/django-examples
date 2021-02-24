@@ -31,7 +31,16 @@ library/
 
 ## getting-started
 
-docker快速开始，运行app
+docker快速开始,构建docker镜像
+```shell
+git clone https://github.com/willzhang/django-library.git
+cd django-library
+
+docker build -t willdockerhub/django-library:latest .
+docker push willdockerhub/django-library:latest
+```
+
+运行django-library app
 ```shell
 docker run -d --name django-library \
  --restart always \
