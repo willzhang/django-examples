@@ -4,7 +4,7 @@
 
 源码结构：
 
-```
+```shell
 library/
 ├── library
 │   ├── asgi.py
@@ -32,7 +32,7 @@ library/
 ## getting-started
 
 docker快速开始，运行app
-```
+```shell
 docker run -d --name django-library \
  --restart always \
  -p 8000:8000 \
@@ -40,7 +40,7 @@ docker run -d --name django-library \
 ```
  
 浏览器访问app
-```
+```shell
 http://127.0.0.1:8000/books/
 ```
  
@@ -51,7 +51,7 @@ books页面：
 ## 连接mysql数据库
  
 运行mysql数据库
-```
+```shell
  docker run -d --name mysql \
   --restart always \
   -p 3306:3306 \
@@ -64,12 +64,12 @@ books页面：
 ```
  
 创建settings.py配置文件目录
- ```
+ ```shell
  mkdir -p /data/django-library/conf/
  ```
 
 修改settings.py配置文件
-```
+```shell
  DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -83,7 +83,7 @@ books页面：
 ```
  
 运行django-library
-```
+```shell
 docker run -d --name django-library \
   --restart always \
   -p 8000:8000 \
@@ -92,7 +92,7 @@ docker run -d --name django-library \
 ```
 
 ## 数据持久化
-```
+```shell
 docker run -d --name django-library \
   --restart always \
   -p 8000:8000 \
