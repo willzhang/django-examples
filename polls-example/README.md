@@ -1,32 +1,31 @@
-# django-library
+# django-polls-example
 
-适合小白的django示例app-图书管理系统，支持书籍增删改查！
+django官方投票程序示例。
 
 源码结构：
 
 ```shell
-library/
-├── library
+mysite/
+├── db.sqlite3
+├── manage.py
+├── mysite
 │   ├── asgi.py
 │   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-├── library_app
+├── polls
 │   ├── admin.py
 │   ├── apps.py
 │   ├── __init__.py
 │   ├── migrations
 │   ├── models.py
 │   ├── static
+│   ├── templates
 │   ├── tests.py
+│   ├── urls.py
 │   └── views.py
-├── manage.py
-├── requirements.txt
-└── templates
-    ├── addbook.html
-    ├── books.html
-    └── changebook.html
+└── requirements.txt
 ```
 
 ## getting-started
@@ -35,82 +34,37 @@ docker快速开始.
 
 1、构建docker镜像
 ```shell
-git clone https://github.com/willzhang/django-library.git
-cd django-library
+git clone https://github.com/willzhang/django-examples.git
+cd django-examples/polls-example
 
-docker build -t willdockerhub/django-library:latest .
-docker push willdockerhub/django-library:latest
+docker build -t willdockerhub/django:polls .
+docker push willdockerhub/django:polls
 ```
 
-2、运行django-library app
+2、运行polls app
 ```shell
-docker run -d --name django-library \
+docker run -d --name polls \
  --restart always \
  -p 8000:8000 \
- willdockerhub/django-library
+ willdockerhub/django:polls
 ```
  
-3、浏览器访问app
+3、浏览器访问polls app
 ```shell
-http://127.0.0.1:8000/books/
+http://127.0.0.1:8000/polls/
 ```
  
-books页面：
+polls页面：
  
-[![yqVrPP.png](https://s3.ax1x.com/2021/02/23/yqVrPP.png)](https://imgchr.com/i/yqVrPP)
- 
-## 连接mysql数据库
- 
-运行mysql数据库
-```shell
- docker run -d --name mysql \
-  --restart always \
-  -p 3306:3306 \
-  -e MYSQL_ROOT_PASSWORD=123456 \
-  -e MYSQL_DATABASE=library \
-  -e MYSQL_USER=library \
-  -e MYSQL_PASSWORD=library123 \
-  -v mysql:/var/lib/mysql \
-  mysql:8.0.23 --default-authentication-plugin=mysql_native_password
-```
- 
-创建settings.py配置文件目录
- ```shell
- mkdir -p /data/django-library/conf/
- ```
+[yqVrPP.png](https://imgtu.com/i/6YXpkV)
 
-修改settings.py配置文件
+4、浏览器访问polls app管理界面
+
 ```shell
- DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'library',
-        'USER': 'library',
-        'PASSWORD': 'library123',
-        'HOST': '172.29.118.192',
-        'PORT': 3306
-    }
-}
-```
- 
-运行django-library
-```shell
-docker run -d --name django-library \
-  --restart always \
-  -p 8000:8000 \
-  -v /data/django-library/conf/settings.py:/code/library/settings.py \
-  willdockerhub/django-library 
+http://127.0.0.1:8000/admin/
 ```
 
-## 数据持久化
-```shell
-docker run -d --name django-library \
-  --restart always \
-  -p 8000:8000 \
-  -v django-library:/code/ \
-  willdockerhub/django-library 
-```
+默认账号admin/123456
 
+[![yqVrPP.png](https://imgtu.com/i/6YOzT0)
 
- 
-参考：https://www.bilibili.com/video/BV12y4y1z72Q
