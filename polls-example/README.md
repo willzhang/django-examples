@@ -60,7 +60,7 @@ docker run -d --name polls \
  willdockerhub/django:polls
 ```
  
-3、浏览器访问polls polls页面：
+3、浏览器访问polls app页面：
 ```shell
 http://127.0.0.1:8000/polls/
 ```
