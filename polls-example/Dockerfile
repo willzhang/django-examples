@@ -1,7 +1,7 @@
 FROM python:3.9-slim-buster
 
 ENV PYTHONUNBUFFERED 1
-ENV PROJECT=polls
+ENV PROJECT=mysite
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends python3-dev default-libmysqlclient-dev gcc \
