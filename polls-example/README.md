@@ -19,9 +19,20 @@ mysite/
 │   ├── apps.py
 │   ├── __init__.py
 │   ├── migrations
+│   │   └── __init__.py
 │   ├── models.py
 │   ├── static
+│   │   └── polls
+│   │       ├── images
+│   │       │   └── background.gif
+│   │       └── style.css
 │   ├── templates
+│   │   ├── admin
+│   │   │   └── base_site.html
+│   │   └── polls
+│   │       ├── detail.html
+│   │       ├── index.html
+│   │       └── results.html
 │   ├── tests.py
 │   ├── urls.py
 │   └── views.py
