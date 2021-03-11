@@ -1,4 +1,4 @@
-# django-library
+# django-library example
 
 适合小白的django示例app-图书管理系统，支持书籍增删改查！
 
@@ -35,11 +35,11 @@ docker快速开始.
 
 1、构建docker镜像
 ```shell
-git clone https://github.com/willzhang/django-library.git
-cd django-library
+git clone https://github.com/willzhang/django-examples.git
+cd django-examples/library-example
 
-docker build -t willdockerhub/django-library:latest .
-docker push willdockerhub/django-library:latest
+docker build -t willdockerhub/django:library .
+docker push willdockerhub/django:library
 ```
 
 2、运行django-library app
@@ -47,7 +47,7 @@ docker push willdockerhub/django-library:latest
 docker run -d --name django-library \
  --restart always \
  -p 8000:8000 \
- willdockerhub/django-library
+ willdockerhub/django:library
 ```
  
 3、浏览器访问app
@@ -99,7 +99,7 @@ docker run -d --name django-library \
   --restart always \
   -p 8000:8000 \
   -v /data/django-library/conf/settings.py:/code/library/settings.py \
-  willdockerhub/django-library 
+  willdockerhub/django:library
 ```
 
 ## 数据持久化
@@ -108,9 +108,8 @@ docker run -d --name django-library \
   --restart always \
   -p 8000:8000 \
   -v django-library:/code/ \
-  willdockerhub/django-library 
+  willdockerhub/django:library
 ```
 
 
- 
 参考：https://www.bilibili.com/video/BV12y4y1z72Q
