@@ -55,8 +55,8 @@ http://127.0.0.1:8000/polls/
 ```
  
 polls页面：
- 
-[yqVrPP.png](https://imgtu.com/i/6YXpkV)
+[![6YOzT0.png](https://s3.ax1x.com/2021/03/11/6YOzT0.png)](https://imgtu.com/i/6YOzT0)
+
 
 4、浏览器访问polls app管理界面
 
@@ -66,5 +66,5 @@ http://127.0.0.1:8000/admin/
 
 默认账号admin/123456
 
-[![yqVrPP.png](https://imgtu.com/i/6YOzT0)
+[![6YXpkV.png](https://s3.ax1x.com/2021/03/11/6YXpkV.png)](https://imgtu.com/i/6YXpkV)
 
