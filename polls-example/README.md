@@ -49,12 +49,11 @@ docker run -d --name polls \
  willdockerhub/django:polls
 ```
  
-3、浏览器访问polls app
+3、浏览器访问polls polls页面：
 ```shell
 http://127.0.0.1:8000/polls/
 ```
  
-polls页面：
 [![6YOzT0.png](https://s3.ax1x.com/2021/03/11/6YOzT0.png)](https://imgtu.com/i/6YOzT0)
 
 
